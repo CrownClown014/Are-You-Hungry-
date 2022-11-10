@@ -1,0 +1,88 @@
+
+/* Targets the body of the site. with the image and the adjustments the image should take up the entirety of th page*/
+body { 
+    background-image: url("https://t4.ftcdn.net/jpg/03/54/72/63/360_F_354726339_wDkWbhZDjFvxYafghZ5lvEv5kRVsY35L.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position:center;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;/*add google font?Can you import from google font and add the import link ubove the body instead of copying html link and adding it to the html code*/
+}
+/*targets the h1 tag 'Are you Hungyr' in the html file*/
+h1{
+    font-size: 45px;
+    color: green;
+    margin-bottom: 20px; /*targets the spacing between 'are you hungry' and the lings*/
+    
+
+}
+
+.container{
+    height: 100vh;
+    width: 100vw; 
+    display: flex;
+    justify-content: center; /* justifying the content-center will move the items to the middle of the page*/
+    align-items: center; /* will center the items in the container*/
+    padding: 10px;
+} 
+
+/* targetting the flex-column class*/
+
+.flex-column{ 
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*targetting the flex-center class*/
+
+.flex-center { 
+    justify-content: center;
+    align-items: center;
+
+}
+/*targets the button 'highscores*/ /* how do i target the buttons seperately?*/
+
+.btn { 
+    display: inline-block;
+    background-color: purple;
+    border-radius: 15px;
+    border: 5px double white;
+    color: yellow;
+    text-align: center;
+    margin: 25px auto;
+    font-size: 25px;
+    padding: 20px;
+    transition:cubic-bezier(1, 0, 0, 1);/*added in but do not know what it does.  further investigation required*/
+    /*cursor:pointer;*/
+}
+
+.btn:hover{ /*it is imperative to add the colon and no spaces as the code will not work*/
+    cursor:pointer;
+    /*box-shadow: 200px 200px gold; not working*/
+    transition-duration: transform 15ms;
+    transform: scale(1.05);
+}
+
+.btn[disabled]:hover{
+    cursor: not-allowed;
+    transform: none;
+    transition: none; 
+}
+
+#HIGHSCORES-btn{
+    background-color: gold; 
+    color: purple;
+}
+/*possible code not working.  to alter the icon do it in HTML?*/
+.bi bi-egg-fried{
+    font-size: 25px;
+    margin-left: 2px;
+}
+
