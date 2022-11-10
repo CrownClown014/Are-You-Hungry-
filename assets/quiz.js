@@ -31,7 +31,7 @@ hotSpice.textContent = hot.question;
 //now that we are able to calle the question, we now need to interact with the answers to that questions.  
 // as stated in the ntml, the questions are represented by the list elements and a class was bound to them with the name multipleChoice.  
 // to interact with the class we do the same as above.  Create a var using the querySelector.  
-var choice = document.querySelectorAll('multiplechoice');//querySelector was giving a null.  trying querySelectorAll?
+var choice = document.querySelectorAll('.multiplechoice');//querySelector was giving a null.  trying querySelectorAll?
 console.log(choice);
 }
 burn(questions); //calling the function burn.  code working.  
