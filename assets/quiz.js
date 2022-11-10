@@ -9,7 +9,7 @@
 //to represent a question the use of an object will allow us to store properties within a var. 
 var questions = {
     question: 'What is the most expensive spice in the World?',
-    multipleChoice:['Cumin', 'Pepper', 'Saffron'],//storing answers in an array to utilize in a for loop later in the code.  The aswer is 2 and not 3 as in an array counting begins with 0
+    multiplechoice:['Cumin', 'Pepper', 'Saffron'],//storing answers in an array to utilize in a for loop later in the code.  The aswer is 2 and not 3 as in an array counting begins with 0
     answer: 2 //Storing the answer
 };
 
@@ -32,6 +32,13 @@ hotSpice.textContent = hot.question;
 // as stated in the ntml, the questions are represented by the list elements and a class was bound to them with the name multipleChoice.  
 // to interact with the class we do the same as above.  Create a var using the querySelector.  
 var choice = document.querySelectorAll('.multiplechoice');//querySelector was giving a null.  trying querySelectorAll?
-console.log(choice);
+//console.log(choice); //used to verify that the class multiple choice from the html doc were appearing on the log.  
+
+//next sept is to have the answers appear with the question.  A for each with a imbedded fuction.  
+
+choice.forEach(function(element, index){
+    element.textContent = hot.multiplechoice[index];
+});
+    
 }
 burn(questions); //calling the function burn.  code working.  
