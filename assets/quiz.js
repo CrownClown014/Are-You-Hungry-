@@ -17,11 +17,21 @@ var questions = {
 
 // To interact with the element you can use document.getElementById('questions') but for this project i will use document.querySelector('#question')
     //experiment to see if the querySelector can be utilized since it bypasses the issue of having to select a class or id by it having the property of being fluid?
-
+    // place the question within a function will allow us to call it
+function burn(hot) { // passing the question through theparameter 'hot'
 // Interact with the DOM element by storing in a variable
 
-var hotSpice = document.querySelector('#question');
+var hotSpice = document.getElementById('question');
 
 //now that the question is 'interactive' we can now change it.  We will use the text.content 
+//hotSpice.textContent=questions.question; --> used before we add the function.  without the function the question will appear on the page
+    //in this code above we would call the var questions then call the property question
+hotSpice.textContent = hot.question; 
 
-hotSpice.textContent = questions.question; 
+//now that we are able to calle the question, we now need to interact with the answers to that questions.  
+// as stated in the ntml, the questions are represented by the list elements and a class was bound to them with the name multipleChoice.  
+// to interact with the class we do the same as above.  Create a var using the querySelector.  
+var choice = document.querySelectorAll('multiplechoice');//querySelector was giving a null.  trying querySelectorAll?
+console.log(choice);
+}
+burn(questions); //calling the function burn.  code working.  
