@@ -35,6 +35,7 @@ function nextquestion(event){
     }
     
     questionCounter++
+
 showQuestions.innerText= foodQuestions[questionCounter].questions;
 
 
@@ -51,3 +52,30 @@ choice1.innerText=foodQuestions[0].questionAnswers[0];
 choice2.innerText=foodQuestions[0].questionAnswers[1];
 choice3.innerText=foodQuestions[0].questionAnswers[2];
 
+
+var countDown = document.querySelector ('.time');
+
+var quizOver = document.getElementById ('end');
+
+var secondsCount = 15;
+
+function timerCount() {
+    
+    var timerCount = setInterval(function() {
+        secondsCount-- ;
+        countDown.textContent = secondsCount + 'Time Remaing of Quiz';
+
+        if(secondsCount === 0) {
+            clearInterval(timerCount);
+            gameover()
+        }
+    }, 1000);
+}
+ function gameover() {
+    countDown.textContent = ' ';
+    var imgEnd = document.createElement ('img');
+    imgEnd.setAttribute ('src','./image/image_1.jpeg');
+    quizOver.appendChild(imgEnd);
+
+ }
+timerCount();
