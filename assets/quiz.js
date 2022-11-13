@@ -1,5 +1,9 @@
+var scoreTracker=document.querySelector('#score');
+var questionCounter=0
+var score=0
+
 var foodQuestions = [{
-    questions: 'What is the spiceist pepper in the World?',
+    questions: 'What is the spiciest pepper in the World?',
     questionAnswers: ['Scorpion', 'Carolina Reaper', 'Birds Eye Chili'],
     correctAnswer: 'Carolina Reaper'
 },
@@ -13,16 +17,20 @@ var foodQuestions = [{
     questionAnswers: ['Coffee', 'Coca-Cola', 'Dr. Pepper'],
     correctAnswer: 'Coca-Cola'
 }]
+var scorePoints = 100;
+var maxQuestions= 3;
+
 var showQuestions= document.querySelector('#question');
 
 var choice1=document.querySelector('#choice1')
 var choice2=document.querySelector('#choice2')
 var choice3=document.querySelector('#choice3')
+
 choice1.addEventListener('click', nextquestion);
 choice2.addEventListener('click', nextquestion);
 choice3.addEventListener('click', nextquestion);
-var questionCounter=0
-var score=0
+
+
 function nextquestion(event){
     console.log (event.target);
     if (event.target.textContent==foodQuestions[questionCounter].correctAnswer){
@@ -63,7 +71,7 @@ function timerCount() {
     
     var timerCount = setInterval(function() {
         secondsCount-- ;
-        countDown.textContent = secondsCount + 'Time Remaing of Quiz';
+        countDown.textContent = secondsCount + " " + 'Time Remaing of Quiz';
 
         if(secondsCount === 0) {
             clearInterval(timerCount);
@@ -79,3 +87,6 @@ function timerCount() {
 
  }
 timerCount();
+
+
+

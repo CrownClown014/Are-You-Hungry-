@@ -1,0 +1,43 @@
+body {
+    color: black; 
+}
+.containter {
+    display: flex;
+    /*margin-bottom: 10px;*/
+    width: 100px;
+
+}
+
+.time {
+    justify-content: center;
+
+}
+
+#question {
+    display: flex;
+    /*margin-bottom: 10px;*/
+    width: 100%;
+    font-size: 25px;
+    color: White;
+
+}
+
+#choice1 {
+    background-color: blue;
+    border-radius: 45px;
+    color: white;
+    font-size: 25px;
+}
+#choice2 {
+    
+    background-color: blue;
+    font-size: 25px;
+    border-radius: 45px;
+    color: white;
+}
+#choice3 {
+    color: white;
+    background-color: blue;
+    font-size: 25px;
+    border-radius: 45px;
+}

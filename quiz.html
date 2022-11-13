@@ -10,19 +10,24 @@
 </head>
 <body>
     <main class="container">
-    <section id="question"></section><!---created id to reference it in the JS and CSS but mainly the JS to showcase js skills-->
-    <ul>
-        <!---list elements used to represent the question answers.  since they act in the same manner applying a class with the same name will allow to target the question in the JS code.  -->
-        <button id="choice1"></button>
-        <button id="choice2"></button>
-        <button id="choice3"></button>
-    </ul>
-    
-</main>
-<h1 class="time"></h1>
-    <section id="end"></section>
+        <h1 class="time"></h1>
+        <section id="end"></section>
 
-<script src="./assets/quiz.js"></script>
+        <section id="question"></section><!---created id to reference it in the JS and CSS but mainly the JS to showcase js skills-->
+            <ul>
+        <!---list elements used to represent the question answers.  since they act in the same manner applying a class with the same name will allow to target the question in the JS code.  -->
+                <button id="choice1"></button>
+                 <button id="choice2"></button>
+                <button id="choice3"></button>
+            </ul>
+        <section class="scorecounter">
+            <p class="title">Score</p>
+            <h2 class="main-text" id="score">0</h2>
+        </section>
+    </main>
+
+
+    <script src="./assets/quiz.js"></script>
 
 </body>
 
